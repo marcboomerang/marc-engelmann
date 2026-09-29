@@ -118,6 +118,25 @@ section { padding-block: clamp(56px, 8vw, 96px); }
 .area ul { margin: 6px 0 0; padding: 0; list-style: none; display: grid; gap: 8px; align-content: start; }
 .area li { padding: 8px 12px; border-radius: 10px; background: var(--accent-soft); font-size: .95rem; }
 
+/* Vergütung – dunkle Box wie der Hero */
+.pay {
+  margin-top: 20px; border-radius: 18px; padding: clamp(24px, 4vw, 40px);
+  background: var(--night); color: var(--night-fg);
+  display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.4fr); gap: clamp(24px, 4vw, 48px); align-items: center;
+}
+@media (max-width: 860px) { .pay { grid-template-columns: minmax(0, 1fr); } }
+.pay .label { color: var(--sky); }
+.pay h3 { font-size: var(--step-2); font-weight: 800; letter-spacing: -.02em; margin: 10px 0 12px; }
+.pay p { color: var(--night-muted); }
+.pay ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+@media (max-width: 520px) { .pay ul { grid-template-columns: minmax(0, 1fr); } }
+.pay li { padding: 16px 18px; border-radius: 12px; border: 1px solid rgba(141, 183, 255, .3); background: rgba(141, 183, 255, .07); display: grid; gap: 4px; }
+.pay li b { font: 600 1.05rem/1.25 var(--font-display); }
+.pay li span { color: var(--night-muted); font-size: .9rem; }
+.pay .cta { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding-top: 20px; border-top: 1px solid rgba(141, 183, 255, .2); }
+.pay .cta p { color: var(--night-fg); }
+.pay .cta .btn { background: var(--sky); color: var(--night); }
+
 /* Über mich */
 .about { background: var(--surface); border-block: 1px solid var(--line); }
 .about-grid { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(32px, 6vw, 80px); align-items: center; }
@@ -247,6 +266,24 @@ footer { border-top: 1px solid var(--line); color: var(--muted); font-size: .9re
             <li>PR- und Marketing-Beratung</li>
           </ul>
         </article>
+      </div>
+
+      <div class="pay" id="verguetung">
+        <div>
+          <p class="label">Vergütung</p>
+          <h3>Fair, startup-freundlich und flexibel.</h3>
+          <p>Nicht jedes Startup hat heute schon Budget. Deshalb gibt es mehrere Modelle.</p>
+        </div>
+        <ul>
+          <li><b>Help now, pay later</b><span>Jetzt loslegen, später zahlen</span></li>
+          <li><b>Provision bei Investmentrunden</b><span>Erfolgsabhängig beim Closing</span></li>
+          <li><b>Festvergütung</b><span>Klar kalkulierbar, pro Projekt oder Tag</span></li>
+          <li><b>Virtuelle Anteile</b><span>z. B. VSOPs</span></li>
+        </ul>
+        <div class="cta">
+          <p>Wählt aus, was am besten zu euch passt, und lasst uns drüber sprechen.</p>
+          <a class="btn" href="mailto:marc@boomerangpack.eu?subject=Anfrage%20%C3%BCber%20deine%20Website">Gespräch anfragen →</a>
+        </div>
       </div>
     </div>
   </section>
